@@ -1,0 +1,431 @@
+/***  KUBO-FORM VERSION 1.2.1 **
+ *
+ * Se agregaro el degradado para el CTAs en color verde, en forms de hubspot
+ *
+ * FIN KUBO-FORM VERSION  ***/
+
+/***    FORMS HUBSPOT   ***/
+form:not(.kubo-form) fieldset{
+    width:100%;
+    max-width: 100%;
+    margin-bottom:10px;
+}
+form:not(.kubo-form) .hs-form-field{
+  padding: 10px 0;
+}
+
+form:not(.kubo-form) label{
+    font-family:var(--font-primary);
+    font-size:18px;
+    font-weight:400;
+    line-height:30px;
+    color:#333
+}
+form:not(.kubo-form) ul{
+    margin-top:2px
+}
+form:not(.kubo-form) ul.inputs-list li label{
+    font-weight:350
+}
+form:not(.kubo-form) .inputs-list,
+form:not(.kubo-form) .hs-form-radio,
+form:not(.kubo-form) ul.hs-error-msgs{
+    list-style:none !important;
+    margin-bottom: 0;
+    padding:0;
+}
+form:not(.kubo-form) ul.hs-error-msgs li label{
+    font-weight:350;
+    color:#e85c41
+}
+form:not(.kubo-form) div.hs_error_rollup{
+    display:none;
+}
+form:not(.kubo-form) div.actions{
+  text-align:center;
+}
+form:not(.kubo-form) legend{
+    font-weight:350;
+    color:#737373;
+    margin-bottom:5px;
+}
+form:not(.kubo-form) input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=submit]),
+form:not(.kubo-form) select,
+form:not(.kubo-form) textarea{
+    box-sizing: border-box;
+  	outline-style:none;
+  	box-shadow:none;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+form:not(.kubo-form) input:not([type=radio]):not([type=checkbox]),
+form:not(.kubo-form) textarea{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+     appearance:none;
+}
+form:not(.kubo-form) input[type=email],
+form:not(.kubo-form) input[type=number],
+form:not(.kubo-form) input[type=password],
+form:not(.kubo-form) input[type=tel],
+form:not(.kubo-form) input[type=text],
+form:not(.kubo-form) select,
+form:not(.kubo-form) textarea{
+    width:100% !important;
+    max-width:1063px;
+    padding-left:10px;
+    height:42px;
+    font-size:18px;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+    letter-spacing:normal;
+    border:1px solid #999;
+    background-color:#f7f8fa;
+    color:#565b59;
+}
+form:not(.kubo-form) input[type=email]:focus,
+form:not(.kubo-form) input[type=number]:focus,
+form:not(.kubo-form) input[type=password]:focus,
+form:not(.kubo-form) input[type=tel]:focus,
+form:not(.kubo-form) input[type=text]:focus,
+form:not(.kubo-form) select:focus,
+form:not(.kubo-form) textarea:focus{
+    border-color:#8fc450
+}
+form:not(.kubo-form) input[type=radio]{
+  margin-left:10px;
+  margin-right:10px;
+    background-color:#ffffff;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+form:not(.kubo-form) input:checked{
+    background-color:#8CC251;
+}
+
+form:not(.kubo-form) .hs-button.primary,
+form:not(.kubo-form) input[type=button],
+form:not(.kubo-form) input[type=submit],
+form:not(.kubo-form) button{
+  display: inline-block;
+  width:100%;
+  margin-top:10px;
+  padding: 12px 41px 13px 41px;
+
+  font-size:20px;
+  font-weight: 400;
+  font-family:var();
+
+  text-align: center;
+  text-decoration: none;
+  text-shadow:none;
+
+  color: #fff;
+  border: none;
+  background-color: #00A82D;
+  background-image: linear-gradient(-90deg, #1DB954, #00A82D) !important;
+
+  cursor: pointer;
+  outline-style:none;
+  box-shadow:none;
+
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius: 50px;
+}
+form:not(.kubo-form) .hs-button.primary:active,
+form:not(.kubo-form) .hs-button.primar:hover,
+form:not(.kubo-form) input[type=button]:active,
+form:not(.kubo-form) input[type=button]:hover,
+form:not(.kubo-form) input[type=submit]:active,
+form:not(.kubo-form) input[type=submit]:hover,
+form:not(.kubo-form) button:active,
+form:not(.kubo-form) button:hover{
+  background-color: #18C847 !important;
+  background-image: none !important;
+}
+form:not(.kubo-form) .hs-button.primary:disabled,
+form:not(.kubo-form) .hs-button.primar:disabled,
+form:not(.kubo-form) input[type=button]:disabled,
+form:not(.kubo-form) button:active:disabled,
+form:not(.kubo-form) button:hover:disabled{
+  border:solid 1px; #ccc !important;
+  background-color: #ccc !important;
+  background-image: none !important;
+}
+form:not(.kubo-form) .hs-form-required{
+    margin-left: 2px;
+    color:#cc0000;
+}
+form:not(.kubo-form) .pika-title td{
+    width:30px;
+    border-radius: 3px !important;
+}
+form:not(.kubo-form) .pika-button{
+    border: solid 1px #f5f5f5;
+    font-size: 17px !important;
+}
+
+@media (max-width:768px){
+  form:not(.kubo-form) .hs-button.primary,
+  form:not(.kubo-form) input[type=button],
+  form:not(.kubo-form) input[type=submit],
+  form:not(.kubo-form) button{
+    font-size:18px;
+  }
+}
+/***   FIN FORMS HUBSPOT  ***/
+
+
+
+
+/***    FORMS HTML   ***/
+.kubo-form *:not(i){
+    font-family:var(--font-primary);
+}
+.kubo-form *{
+    box-sizing:border-box;
+}
+.kubo-form h1
+.kubo-form h2,
+.kubo-form h3{
+    text-align:center;
+    color:#333
+}
+.kubo-form h1{
+    font-size:24px;
+    font-weight:900
+}
+.kubo-form h2{
+    font-size:20px;
+    font-weight:300
+}
+.kubo-form h3{
+    font-size:16px;
+    font-weight:300
+}
+.kubo-form label{
+    font-family:var(--font-primary);
+    font-size:18px;
+    font-stretch:100%;
+    font-style:normal;
+    font-weight:400;
+    letter-spacing:normal;
+    line-height:40px;
+    color:#333;
+}
+.kubo-form label .requerido{
+    padding-left:5px;
+    color:#cc0000;
+}
+.kubo-form legend{
+    font-family:var(--font-primary);
+    font-size:16px;
+    font-weight:350;
+    line-height:25.2px;
+    margin:-1% 0 5px 0;
+    color:#737373
+}
+.kubo-form .espacio-vertical{
+    margin-bottom:35px
+}
+.kubo-form input[type=checkbox],
+.kubo-form input[type=radio],
+.kubo-form input[type=email],
+.kubo-form input[type=file],
+.kubo-form input[type=number],
+.kubo-form input[type=password],
+.kubo-form input[type=tel],
+.kubo-form input[type=text],
+.kubo-form textarea,
+.kubo-form select{
+    width:100%;
+    max-width:1063px;
+    padding-left:10px;
+    height:42px;
+    font-size:18px;
+    font-weight:normal;
+    border:solid 1px #999;
+    background-color:#f7f8fa;
+    color:#565b59;
+    outline-style:none;
+    box-shadow:none;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px
+}
+.kubo-form input[type=radio]{
+    width:auto;
+    height: 1em;
+}
+.kubo-form input[type=checkbox][data-warning=true],
+.kubo-form input[type=radio][data-warning=true],
+.kubo-form input[type=email][data-warning=true],
+.kubo-form input[type=file][data-warning=true],
+.kubo-form input[type=number][data-warning=true],
+.kubo-form input[type=password][data-warning=true],
+.kubo-form input[type=tel][data-warning=true],
+.kubo-form input[type=text][data-warning=true],
+.kubo-form textarea[data-warning=true],
+.kubo-form select[data-warning=true]{
+    border-color:#e85c41
+}
+.kubo-form input[type=checkbox]:focus-within,
+.kubo-form input[type=radio]:focus-within,
+.kubo-form input[type=email]:focus-within,
+.kubo-form input[type=file]:focus-within,
+.kubo-form input[type=number]:focus-within,
+.kubo-form input[type=password]:focus-within,
+.kubo-form input[type=tel]:focus-within,
+.kubo-form input[type=text]:focus-within,
+.kubo-form textarea:focus-within,
+.kubo-form select:focus-within{
+    border-color:#8fc450
+}
+.kubo-form input[type=file]{
+    background-color:#fff
+}
+.kubo-form input[type=button],
+.kubo-form input[type=submit]{
+    height:50px
+}
+.kubo-form select.date-input{
+    display:inline-block;
+    width:31%;
+}
+.kubo-form .espacio-vertical div select.date-input:nth-child(1),
+.kubo-form .espacio-vertical div select.date-input:nth-child(2){
+    margin-right:2.0%;
+}
+.kubo-form ul{
+    margin-top:2px
+}
+.kubo-form div.fake-input{
+    position:relative
+}
+.kubo-form div.fake-input>input{
+    width:100%;
+    padding-left:30px;
+    box-sizing:border-box;
+}
+div.fake-input>i{
+    position:absolute;
+    top:12px;
+    left:10px;
+    padding-left:5px;
+    font-size:18px;
+    color:#999
+}
+.kubo-form .input-warning{
+    margin: 5px 0 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #e85c41;
+}
+.kubo-form div.general-warning{
+    font-size:16px;
+    font-weight:300;
+    color:#262322;
+    padding:10px;
+    margin:10px 0 10px 0;
+    background-color:#f9d0c7;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px
+}
+div.general-warning>i{
+    color:#999;
+    margin-right:5px
+}
+@media (max-width:768px){
+  form:not(.kubo-form) .hs-button.primary,
+  form:not(.kubo-form) input[type=button],
+  form:not(.kubo-form) input[type=submit],
+  form:not(.kubo-form) button{
+    font-size:18px;
+  }
+}
+/***    FIN FORMS HTML   ***/
+
+
+
+
+/***    KUBO BUTTONS    ***/
+.callAction {
+  display: inline-block;
+  padding: 0 25px;
+
+  font-size:20px;
+  font-weight: normal;
+  font-family:var(--font-primary);
+
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow:none;
+
+  cursor: pointer;
+  outline-style:none;
+  box-shadow:none;
+
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius: 50px;
+
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+.kubo-form .callAction{
+  width:100%;
+}
+.btnVerde, .btnPrimario {
+  color: #fff;
+  border: none;
+  background-color: var(--green-color);
+  background-image: linear-gradient(-90deg, #1DB954, var(--green-color))
+}
+.btnVerde:active,
+.btnVerde:hover,
+.btnPrimario:active,
+.btnPrimario:hover{
+  background-color: var(--dark-green-color);
+  background-image: none;
+  text-decoration: none;
+}
+.btnNaranja{
+    color: #fff;
+    background-color: var(--orange-color);
+}
+.btnNaranja:active,
+.btnNaranja:hover {
+    background-color: var(--dark-orange-color);
+    text-decoration: none;
+}
+.btnBlanco{
+  	color: var(--green-color);
+    background-color: #fff;
+    border: solid 1px #999;
+}
+.btnBlanco:active,
+.btnBlanco:hover{
+    border: var(--gray-color) solid 1px;
+    text-decoration: none;
+}
+.btnAzul{
+  	color: #fff;
+    background-color: var(--fb-blue-color);
+}
+@media (max-width:768px){
+  .callAction{
+    width:100%;
+    box-sizing: border-box;
+    font-size:18px;
+  }
+}
+/***    FIN KUBO BUTTONS    ***/

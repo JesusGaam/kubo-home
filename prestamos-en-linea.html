@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <title>Lorem ipsum dolor sit amet</title>
+    <title>Préstamos en línea</title>
     <link rel="stylesheet" href="css/estilos-basicos.css">
     <link href="css/kubo-form-1.2.2.css" rel="stylesheet" media="nope!" onload="this.media='all'">
     <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -77,7 +77,8 @@
         <div class="container" id="simular-prestamo">
             <style>
                 #simular-presta {
-                    padding: 20px 0 60px 0;
+                    padding-top: 60px;
+                    padding-bottom: 60px;
                     background: var(--gray-background-color);
                 }
             </style>
@@ -88,7 +89,8 @@
         <div class="container" id="prestamos-en-linea">
             <style>
                 #prestamos-en-linea {
-                    padding: 60px 0px;
+                    padding-top: 60px;
+                    padding-bottom: 60px;
                 }
                 
                 #prestamos-en-linea h2 {
@@ -141,67 +143,159 @@
                 <p>¡Regístrate ya! Forma parte de nuestra comunidad digital.</p>
             </div>
         </div>
-        <div class="container" id="nos-hace-unicos">
-            <style>
-                #nos-hace-unicos {
-                    padding: 60px 0;
+        <div class="container" id="cuales-requisitos">
+                <style>
+                  #cuales-requisitos {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
                     background-color: var(--gray-background-color);
-                }
-                
-                #nos-hace-unicos img {
+                  }
+                  #cuales-requisitos ul{
+                      margin:0;
+                      padding: 0;
+                      list-style: none;
+                  }
+                  #cuales-requisitos ul li{
+                      padding-bottom: 10px;
+                      padding-right: 10px;
+                      line-height: 1.6;
+                  }
+                  #cuales-requisitos ul li::before{
+                    content: "\2022";
+                    color: var(--green-color);
+                    padding-right: 20px;
+                    font-size: 30px;
+                  }
+                  #cuales-requisitos img {
                     height: 100px;
-                }
-                
-                #nos-hace-unicos h3 {
-                    margin: 12px 0;
-                }
-                
-                @media (min-width: 769px) {
-                    #nos-hace-unicos h2 {
-                        margin-bottom: 40px;
+                  }
+                  #cuales-requisitos h2, 
+                  #cuales-requisitos h3{
+                    text-align: center;
+                  }
+                  #cuales-requisitos h2{
+                      margin-bottom: 0;
+                  }
+                  #cuales-requisitos h3 {
+                    margin: 20px auto !important;
+                    font-size: 26px;
+                  }
+          
+                  @media (min-width: 769px) {
+                    #cuales-requisitos h2 {
+                      margin-bottom: 40px;
                     }
-                    #nos-hace-unicos div>.col-4:first-child {
-                        padding-right: 20px;
+                    #cuales-requisitos h3 {
+                        height: 50px;
                     }
-                    #nos-hace-unicos div>.col-4:nth-child(2) {
-                        padding: 0 10px;
+                    #cuales-requisitos div>.col-3:first-child {
+                      padding-right: 10px;
                     }
-                    #nos-hace-unicos div>.col-4:nth-child(3) {
-                        padding-left: 20px;
+          
+                    #cuales-requisitos div>.col-3:nth-child(2), 
+                    #cuales-requisitos div>.col-3:nth-child(3) {
+                      padding: 0 10px;
                     }
-                }
-                
-                @media (max-width: 768px) {
-                    #nos-hace-unicos .col-4 {
-                        margin-top: 60px;
+          
+                    #cuales-requisitos div>.col-3:nth-child(4) {
+                      padding-left: 10px;
                     }
-                    #nos-hace-unicos p {
-                        text-align: center;
+                  }
+          
+                  @media (max-width: 768px) {
+
+                    #cuales-requisitos h3 {
+                        height: auto;
+                        padding: 10px 0 !important;
                     }
-                    #nos-hace-unicos div>.col-4:nth-child(3) img {
-                        margin-bottom: -16px;
+                    #cuales-requisitos .col-3 {
+                      margin-top: 60px;
                     }
+          
+                    #cuales-requisitos p {
+                      text-align: center;
+                    }
+          
+                    #cuales-requisitos div>.col-3:nth-child(3) img {
+                      margin-bottom: -16px;
+                    }
+                  }
+                </style>
+                <div class="container-center">
+                    <h2>¿Cómo solicitar un préstamo?</h2>
+                    <div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Tener un buen historial creditício.</li>
+                                <li>Comprobar mínimo un año en tu empleo.</li>
+                                <li>Identificación oficial vigente.</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Comprobar ingresos mensuales de mínimo $6 mil.</li>
+                                <li>Tener una cuenta bancaria a tu nombre.</li>
+                                <li>Comprobante de domicilio.</li>
+                            </ul>      
+                        </div>
+                    </div>
+                    <h2 style="margin-top: 60px;">¿Cómo solicitar un préstamo?</h2>
+                    <div>
+                        <div class="col-3">
+                          <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-1.svg"
+                            alt="Certificado de seguridad"></div>
+                          <h3>Regístrate</h3>
+                          <p>Crea una cuenta con tu correo y contraseña.</p>
+                        </div>
+                        <div class="col-3">
+                            <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-2.svg"
+                              alt="Manos tomando dinero"></div>
+                          <h3>Obtén tu pre-aprobación</h3>
+                          <p>Sólo te tomará 5 minutos.</p>
+                        </div>
+                        <div class="col-3">
+                            <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-3.svg"
+                              alt="anteojos"></div>
+                          <h3>Sube tus documentos</h3>
+                          <p>Termina tu solicitud y sube tus documentos.</p>
+                        </div>
+                        <div class="col-3">
+                            <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-3.svg"
+                              alt="anteojos"></div>
+                          <h3>Obtén tu dinero</h3>
+                          <p>Si tu préstamo es aprobado recibes una transferencia a tu nombre.</p>
+                        </div>
+                  </div>
+            </div>
+        </div>
+        <div class="container" id="haz-que-suceda">
+            <style type="text/css">
+                #haz-que-suceda h2{
+                    text-align: center;
+                    margin-bottom: 0 !important;   
                 }
             </style>
             <div class="container-center">
-                <h2>Lo que nos hace únicos</h2>
+                <h2>Haz que suceda</h2>
+                <p>Si deseas pagar deudas, mejorar tu negocio o comprar un nuevo carro, kubo.financiero te puede ayudar.</p>
                 <div>
-                    <div class="col-4">
-                        <center><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-1.svg" alt="Certificado de seguridad"></center>
-                        <h3>Plataforma regulada y segura</h3>
-                        <p>Estamos <strong>regulados</strong> por la <strong>Comisión Nacional Bancaria y de Valores</strong>, por lo cual tu dinero está seguro.</p>
+                    <div class="col-3">
+                        <div class="bock">
+                            <img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/productos-acreditado/5.png" alt="">
+                            <h3>Pagar deudas</h3>
+                            <p>Deja de pagar intereses altos...</p>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <center><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-2.svg" alt="Manos tomando dinero"></center>
-                        <h3>Hacemos las finanzas más humanas</h3>
-                        <p>Creamos <strong>comunidad</strong>, las personas son lo más <strong>importante</strong> para nosotros.</p>
+                    <div class="col-3">
+                        <div class="bock">
+                            <img src="" alt="">
+                            <h3></h3>
+                            <p></p>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <center><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-3.svg" alt="anteojos"></center>
-                        <h3>Transparencia total y sin burocracia</h3>
-                        <p>Transacciones transparentes y sin burocracia. Conoce dónde estás invirtiendo o quién fondea tu préstamo en cualquier momento.</p>
-                    </div>
+                    <div class="col-3"></div>
                 </div>
+                
             </div>
         </div>
     </main>

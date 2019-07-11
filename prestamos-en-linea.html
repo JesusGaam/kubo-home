@@ -12,6 +12,8 @@
     <script defer src="js/javascript-basico.js"></script>
     <script defer src="https://informes.kubofinanciero.com/hs-fs/hub/2511529/hub_generated/template_assets/1555020196516/js/kubo-utilidades-V1-2.min.js"></script>
     <script defer src="https://use.fontawesome.com/666aa4b451.js"></script>
+    <script defer src="components/footer.js"></script>
+    <script defer src="components/header-menu.js"></script>
     <style>
          :root {
             --top-content-header: initial;
@@ -37,20 +39,7 @@
             </div>
         </div>
     </header>
-    <div class="container" id="header-menu">
-        <div class="container-center">
-            <nav>
-                <ul>
-                    <li class="mobile-element"><a href="#iniciarSesion" class=" link-modal-dialog" data-content-modal-dialog="modal-login">Iniciar sesión</a></li>
-                    <li><a href="#inicio">Préstamos</a></li>
-                    <li><a href="#Loremipsum">Inversión</a></li>
-                    <li><a href="#dolorsitamet">Quienes Somos</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li class="especial"><a href="#gana300">¡Gana $300!</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <div class="container" id="header-menu"></div>
     <main>
         <div class="container" id="header">
             <div class="container-center">
@@ -61,29 +50,304 @@
                     <style>
                         #header-options .ctas {
                             text-align: center;
-                            padding-top: 40px;
                         }
                         
-                        @media (min-width: 769px) {}
+                        @media (min-width: 769px) {
+                            #header-options .ctas {
+                                padding-top: 40px;
+                            }
+                        }
                         
-                        @media (max-width: 768px) {}
+                        @media (max-width: 768px) {
+                            #header-options .ctas {
+                                padding-top: 20px;
+                            }
+                        }
                     </style>
-                    <div class="ctas">
-                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un prestamo</a>
+                    <script>
+                        window.addEventListener("load", function() {
+                            $("#btn-simular-prestamo").on("click", function() {
+                                $("#simular-prestamo").scrollTo($(window).width() > 768 ? -60 : 0);
+                            });
+                        }, false);
+                    </script>
+                    <div>
+                        <div class="ctas col-2"></div>
+                        <div class="ctas col-4">
+                            <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un préstamo</a>
+                        </div>
+                        <div class="ctas col-4">
+                            <a class="callAction btnSecundarioGris" id="btn-simular-prestamo">Simula tu préstamo</a>
+                        </div>
+                        <div class="ctas col-2"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container" id="simular-prestamo">
             <style>
-                #simular-presta {
-                    padding-top: 60px;
+                #simular-prestamo {
+                    padding-top: 30px;
                     padding-bottom: 60px;
                     background: var(--gray-background-color);
                 }
+                
+                #simular-prestamo h2 {
+                    text-align: center;
+                }
+                
+                #simular-prestamo .kubo-form {
+                    max-width: 450px;
+                    margin: 0 auto;
+                }
+                
+                #simular-prestamo input,
+                #simular-prestamo select {
+                    background-color: #ffffff;
+                }
+                
+                #simular-prestamo .col-6 {
+                    margin-top: 30px;
+                }
+                
+                #simular-prestamo .col-6.left {
+                    padding-right: 5px;
+                }
+                
+                #simular-prestamo .col-6.right {
+                    padding-left: 5px;
+                }
+                
+                #simular-prestamo label {
+                    line-height: 30px;
+                }
+                
+                #simular-prestamo .col-6 input {
+                    margin-top: 2px;
+                }
+                
+                #simular-prestamo .col-6 select {
+                    margin-top: 4px;
+                }
+                
+                #simular-prestamo .col-4 {
+                    margin-top: 40px;
+                }
+                
+                #simular-prestamo .col-4 .label-result {
+                    padding: 0 10px;
+                    text-align: center;
+                    font-size: 20px;
+                    color: #333;
+                }
+                
+                #simular-prestamo .col-4 .result {
+                    margin-top: 14px;
+                    font-size: 30px;
+                    font-weight: 700;
+                    text-align: center;
+                    color: #00A82D;
+                    word-break: break-all;
+                }
+                
+                #simular-prestamo .legales-simulador {
+                    margin-top: 30px;
+                }
+                
+                #simular-prestamo .legales-simulador p {
+                    text-align: center;
+                    line-height: 1.4;
+                    color: #999999;
+                    padding: 10px 0;
+                }
+                
+                #simular-prestamo .legal-cat {
+                    font-size: 25px;
+                }
+                
+                #simular-prestamo .legal-tasa {
+                    color: #565B5A;
+                }
             </style>
+            <script type="text/javascript">
+                window.addEventListener("load", function() {
+
+                    $("#monto-simulador").onlyNumbers();
+                    $("#cuota-simulador").onlyNumbers();
+
+                    simularPrestamo();
+
+                    $("#monto-simulador").on("keyup", function() {
+                        simularPrestamo()
+                    });
+
+                    $("#frecuencia-simulador").on('change', function() {
+                        var option = $("#frecuencia-simulador option:checked").html().toLowerCase();
+
+                        $("#cuota-simulador-label").html(option);
+                        $("#pago-frecuencia-label").html(option.replace("mente", ""));
+
+                        simularPrestamo()
+                    });
+
+                    $("#cuota-simulador").on("keyup", function() {
+                        simularPrestamo();
+                    });
+
+                }, false);
+
+                function validarCampos(monto, frecuencia, cuota, plazo) {
+
+                    if (monto < 5000) {
+                        $("#warning-monto-simulador").html("El monto mínimo permitido es de 5 mil pesos").show()
+                    } else if (monto > 100000) {
+                        $("#warning-monto-simulador").html("El monto máximo permitido es de 100 mil pesos").show()
+                    } else if (isNaN(monto)) {
+                        $("#warning-monto-simulador").html("Por favor, ingresa una cantidad").show()
+                    } else {
+                        $("#warning-monto-simulador").html("").hide()
+                    }
+
+                    if (frecuencia == 0) {
+                        $("#warning-frecuencia-simulador").html("Elige una opción").show()
+                    } else {
+                        $("#warning-frecuencia-simulador").html("").hide()
+                    }
+
+                    if (cuota > monto) {
+                        $("#warning-cuota-simulador").html("El pago no puede superar el monto que necesitas").show()
+                    } else if (isNaN(cuota)) {
+                        $("#warning-cuota-simulador").html("Por favor, ingresa una cantidad").show()
+                    } else if (isNaN(plazo)) {
+                        $("#warning-cuota-simulador").html("Ingresa un monto mayor").show()
+                    } else if ((frecuencia == 'M' && plazo > 36) || ((frecuencia == 'S' || frecuencia == 'K') && plazo > 72) || (frecuencia == 'W' && plazo > 144)) {
+                        $("#warning-cuota-simulador").html("Ingresa un monto mayor").show()
+                    } else {
+                        $("#warning-cuota-simulador").html("").hide()
+                    }
+                }
+
+                function simularPrestamo() {
+
+                    var monto = parseFloat($("#monto-simulador").val().replace(".00", "").replace(",", ""));
+                    var frecuencia = $("#frecuencia-simulador").val();
+                    var cuotaMaxima = parseFloat($("#cuota-simulador").val().replace(".00", "").replace(",", ""));
+                    var tasa = calcularTasa(0.4028, frecuencia);
+                    var comision = parseFloat(monto * 0.04).toFixed(2);
+                    var errorExist = false;
+
+                    var plazo = Math.ceil(calcularPlazo(monto, cuotaMaxima, tasa));
+                    var cuotaReal = calcularCuota(monto, plazo, tasa);
+
+                    validarCampos(monto, frecuencia, cuotaMaxima, plazo);
+                    errorExist = $("#warning-monto-simulador").is(":visible") || $("#warning-frecuencia-simulador").is(":visible") || $("#warning-cuota-simulador").is(":visible");
+
+                    console.log("Monto: " + monto);
+                    console.log("Frecuencia: " + frecuencia);
+                    console.log("Comision: " + comision);
+                    console.log("Cuota Maxima: " + cuotaMaxima);
+                    console.log("Tasa: " + tasa);
+                    console.log("Plazo: " + calcularPlazo(monto, cuotaMaxima, tasa))
+                    console.log("");
+
+                    if (!errorExist) {
+
+                        var valorFuturo = calcularValorFuturo(monto, plazo, tasa);
+
+                        console.log("Valor futuro:" + calcularValorFuturo(monto, plazo, tasa));
+                        console.log("Plazo: " + plazo);
+                        console.log("Cuota Real: " + cuotaReal);
+                        console.log("=========");
+
+                        $(".plazo-simulador-result").html(plazo + " pagos");
+                        $(".plazo-cuota-result").html($.formatoMoneda(cuotaReal).replace(".00", ""));
+                    } else {
+                        $("#div-plazo").html("0");
+                        $("#div-cuota-simulador").html("0");
+                        $("#div-cat").html("CAT: 0%")
+                    }
+                }
+
+                function calcularTasa(tasa, frecuencia) {
+                    switch (frecuencia) {
+                        case 'W':
+                            tasa = tasa / (360 / 7);
+                            break;
+                        case 'K':
+                            tasa = tasa / (360 / 14);
+                            break;
+                        case 'S':
+                            tasa = tasa / (360 / 15);
+                            break;
+                        case 'M':
+                            tasa = tasa / 12;
+                            break;
+                    }
+                    return tasa;
+                }
+
+                function calcularCuota(monto, plazo, tasa) {
+                    return (tasa * monto) / (1 - Math.pow(1 + tasa, -plazo))
+                }
+
+                function calcularPlazo(monto, cuota, tasa) {
+                    cuota = cuota > 0 ? -1 * cuota : cuota;
+                    var plazo = Math.log((monto * tasa / cuota) + 1) / Math.log(1 + tasa);
+                    return plazo < 0 ? -1 * plazo : plazo;
+                }
+
+                function calcularValorFuturo(valorPresente, plazo, tasa) {
+                    return valorPresente * Math.pow(1 + tasa, plazo);
+                }
+            </script>
             <div class="container-center">
                 <h2>Simula tu préstamo</h2>
+                <div class="kubo-form">
+                    <div>
+                        <label for="monto-simulador" style="color: #565b59;">¿Cuánto dinero necesitas?</label>
+                        <legend>Desde $5,000 hasta $100,000 pesos</legend>
+                        <input type="text" value="10,000.00" id="monto-simulador" name="monto-simulador" data-warning="false">
+                        <div id="warning-monto-simulador" class="input-warning" style="display:none;"></div>
+                    </div>
+                    <div>
+                        <div class="col-6 left">
+                            <label for="frecuencia-simulador">¿Cada cuándo te gustaría pagar?</label>
+                            <select name="frecuencia-simulador" id="frecuencia-simulador">
+                                   <option value="0">Selecciona una opci&oacute;n</option>
+                                   <option value="W">Semanalmente</option>
+                                   <option value="K">Catorcenalmente</option>
+                                   <option value="S">Quincenalmente</option>
+                                   <option value="M" selected>Mensualmente</option>
+                                </select>
+                            <div id="warning-frecuencia-simulador" class="input-warning" style="display:none;">Por favor, selecciona una opci&oacute;n</div>
+                        </div>
+                        <div class="col-6 right">
+                            <label for="cuota-simulador">¿Cuánto estimas pagar <span id="cuota-simulador-label">mensualmente</span>?</label>
+                            <input type="text" value="1,500.00" id="cuota-simulador" name="cuota-simulador" data-warning="false">
+                            <div id="warning-cuota-simulador" class="input-warning" style="display:none;">Por favor, ingresa una cantidad</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-4">
+                            <div class="label-result">Número de pagos</div>
+                            <div class="result plazo-simulador-result"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="label-result">Nuestra tasa promedio</div>
+                            <div class="result">40.28%</div>
+                        </div>
+                        <div class="col-4">
+
+                            <div class="label-result">Pago mensual</div>
+                            <div class="result plazo-cuota-result"></div>
+                        </div>
+                    </div>
+                    <div class="legales-simulador">
+                        <p>CAT anual promedio del <span class="legal-cat legal-tasa">56.4%</span> sin IVA. Calculado al 1 de Enero del 2019.</p>
+                        <p>La tasa presentada es anual, simple, fija, antes de impuestos y podrá variar del <span class="legal-tasa">16.5%</span> al <span class="legal-tasa">59.4%</span> según la calificación crediticia.</p>
+                        <p>Consultar términos, condiciones y comisiones en <a href="https://www.kubofinanciero.com/Kubo/Portal/index.xhtml">www.kubofinanciero.com</a></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container" id="prestamos-en-linea">
@@ -100,47 +364,90 @@
                 #prestamos-en-linea h2 {
                     margin: 45px auto 20px auto;
                 }
+                
+                #prestamos-en-linea h3 {
+                    margin: 0 auto 20px auto !important;
+                }
+                
+                #prestamos-en-linea .image-text {
+                    text-align: center;
+                    margin-bottom: 80px;
+                }
+                
+                #prestamos-en-linea .image-text img {
+                    max-width: 700px;
+                }
+                
+                @media (max-width: 768px) {
+                    #prestamos-en-linea .image-text img {
+                        width: 100%;
+                    }
+                }
             </style>
             <div class="container-center">
-                <h2>Préstamos en Línea</h2>
-                <p>kubo.financiero es una plataforma digital donde puedes solicitar préstamos en línea de manera rápida y segura. Ahórrate las largas filas y tener que dejar un aval. Puedes hacer el proceso de solicitud de préstamos en cualquier horario
-                    y 100% en Internet, ya que recibimos todos los documentos de manera digital.</p>
-                <p>Estamos regulados por la Comisión Nacional Bancaria y de Valores (CNBV), por lo que para ser candidato para solicitar préstamos en línea debes contar con buen historial crediticio y realizar la solicitud por Internet.</p>
-                <p>Puedes realizar todo el proceso por tu cuenta, pero si necesitas ayuda un asesor podrá apoyarte en el proceso. En kubo.financiero, pionero de la digitalización de la industria financiera, podrás recibir préstamos de dinero en tu cuenta
-                    en menos de 24 horas.</p>
+                <h2>Préstamos en línea al instante</h2>
+                <p>kubo.financiero es una plataforma digital donde puedes solicitar préstamos en línea de manera rápida y segura. Ahórrate las largas filas y tener que dejar un aval. Puedes hacer el llenado de tu solicitud en cualquier horario y 100% en
+                    Internet, ya que recibimos todos los documentos de manera digital.</p>
+                <p>Estamos regulados por la Comisión Nacional Bancaria y de Valores (CNBV), por lo que para ser candidato para solicitar préstamos debes contar con buen historial crediticio y llenar la solicitud por Internet con todos los datos que se te
+                    piden.
+                </p>
+                <p>Todo este proceso lo puedes realizar por tu cuenta pero si necesitas ayuda un asesor te podrá apoyar con tus dudas para que puedas recibir tu préstamo de dinero en menos de 24 horas.</p>
+
+                <div class="image-text">
+                    <img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/simulator-img/prestamos-linea.jpg" alt="préstamos en línea. Personas con célular.">
+                </div>
 
                 <h2>Tecnología Fintech:</h2>
-                <p>De la mano de los avances tecnológicos y las regulaciones sobre la industria fintech, se han optimizado los procesos para solicitar préstamos en línea y la protección de datos personales en Internet.</p>
-                <p>Hoy la industria financiera se ha volcado al mercado digital y tiene mucho más por ofrecerte: ya puedes pedir tu préstamo 100% por Internet.</p>
+                <p>Al ser pioneros de la digitalización de la industria financiera, buscamos el fortalecimiento de la clase media mexicana a través de préstamos que den valor y que ayuden a construir el futuro. Es por eso que aprovechamos los avances tecnológicos
+                    y las regulaciones sobre la industria Fintech, optimizando los procesos para solicitar préstamos en línea y garantizando la protección de datos personales en Internet.</p>
+                <p>Hoy la industria financiera se ha volcado al mercado digital por la eficiencia, rapidez y seguridad de realizar movimientos financieros.</p>
 
-                <h2>¿Qué necesito para obtener un préstamo a una tasa personalizada?</h2>
-                <p>Para solicitar un préstamo solo necesitas hacer lo siguiente:</p>
+                <div class="image-text">
+                    <img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/simulator-img/fintech.jpg" alt="Préstamos en línea méxico. mujer con computadora">
+                </div>
+
+                <h2>Lo que debes saber:</h2>
+                <p><b>¿Qué requisitos necesito para obtener un préstamo?</b></p>
                 <ul>
                     <li>
-                        <strong>Registra tu correo</strong>: nuestros servicios son exclusivamente en línea, por ello es necesario crear una cuenta con tu correo electrónico y una contraseña.
+                        <b>Registra tu correo</b>: nuestros servicios son exclusivamente en línea, por ello es necesario crear una cuenta con tu correo electrónico y una contraseña.
                     </li>
                     <li>
-                        <strong>Obtén tu preaprobación</strong>: después de registrar tu correo, te pediremos autorización para consultar tu historial crediticio. Así podremos darte la preaprobación de tu préstamo.
+                        <b>Obtén tu preaprobación</b>: después de registrar tu correo, te pediremos autorización para consultar tu historial crediticio. Así podremos darte la preaprobación de tu préstamo.
                     </li>
                     <li>
-                        <strong>Sube los documentos que se te piden</strong>: ten a la mano tu identificación oficial, comprobante de domicilio y comprobante de ingresos. Recuerda que éste último puede variar dependiendo de tu actividad económica.
+                        <b>Sube los documentos que se te piden</b>: ten a la mano tu identificación oficial, comprobante de domicilio y comprobante de ingresos. Recuerda que éste último puede variar dependiendo de tu actividad económica.
                         <ul style="margin-top: 40px;">
                             <li>
-                                <strong>Obtén la aprobación de tu préstamo</strong>: nuestro equipo se pondrá en contacto contigo para comunicarte que tu préstamos ha sido aprobado y que será depositado en tu cuenta.
+                                <b>Obtén la aprobación de tu préstamo</b>: nuestro equipo se pondrá en contacto contigo para comunicarte que tu préstamos ha sido aprobado y que será depositado en tu cuenta.
                             </li>
                             <li>
-                                <strong>¡Listo!</strong> Recibe tu préstamo.
+                                <b>¡Listo!</b> Recibe tu préstamo.
                             </li>
                         </ul>
                     </li>
                 </ul>
 
-                <h2>¿De cuánto son los préstamos que otorgamos?</h2>
-                <p>kubo.financiero otorga préstamos de $5,000 MXN hasta $100,000 MXN para lo que necesites, desde impulsar tu negocio, cubrir cuentas médicas, hasta mejoras para tu casa.</p>
-
-                <h2>Formas de pago</h2>
+                <h2>¿Cuáles son las formas de pago?</h2>
                 <p>Puedes pagar tu préstamo con transferencia electrónica (SPEI), en sucursales de Banorte, BBVA Bancomer, cualquier oficina de Telecomm o 7-Eleven.</p>
                 <p>¡Regístrate ya! Forma parte de nuestra comunidad digital.</p>
+
+                <h2>Otras opciones para clientes:</h2>
+                <h3>Renovación de préstamos</h3>
+                <p>Si eres cliente de kubo.financiero y has cumplido puntualmente con tus pagos puedes ser candidato a la renovación de tu préstamo. Esta opción es de gran ayuda a nuestros clientes con negocio propio ya que ayuda a que tengan flujo de capital
+                    para las diversificación y desarrollo del negocio o comercio que manejen.</p>
+                <p>Así también dependiendo del comportamiento en los pagos a kubo.financiero y créditos externos, es posible obtener la renovación del préstamo por una mayor cantidad y a una tasa más baja. Es por eso importante mantener un historial de pagos
+                    puntual, para ser candidato a más y mejores créditos y que también te ayudarán para cualquier otro tipo de financiamiento y crédito.</p>
+
+
+                <h3>Consolidación de deudas</h3>
+                <p>Consolidar o reunificar deudas es una opción que ofrecemos a nuestros mejores clientes. El reunificar deudas en kubo.financiero te puede ayudar a reducir los intereses que pagas cada mes en tus otros créditos.</p>
+                <p>Esta ya es una opción recurrente ya que el mercado financiero ofrece infinidad de opciones de crédito fáciles de obtener: desde bancos a tiendas departamentales, desde financieras a agencias de autos.</p>
+                <p>Por un lado esto es una ventaja ya que abre la posibilidad de acceso a productos y servicios que normalmente no se podría y con facilidad de pagos. La desventaja es que al solicitar muchos créditos tu capacidad de pago disminuye a la vista
+                    de nuevos préstamos, y mes con mes los intereses de los créditos se van acumulando lastimando en gran medida tu liquidez. A su vez no todos los créditos ofrecen tasas de interés bajas.</p>
+                <p>Al unificar deudas en kubo.financiero la primer ventaja es que tienes la facilidad de que sólo tienes que hacer el pago a una sola institución, así puedes llevar un mejor control de tus créditos. Además tendrás diferentes opciones a elegir
+                    para pagar tu crédito: por buen historial es posible que se reduzcan los intereses que estás pagando actualmente; también puedes elegir pagar todo más rápido para liberarte de los créditos lo antes posible; y finalmente elegir pagar
+                    en un lapso más amplio para mejorar tu liquidez.</p>
             </div>
         </div>
         <div class="container" id="cuales-requisitos">
@@ -424,128 +731,7 @@
         </div>
     </main>
     <footer>
-        <div class="container">
-            <div class="container-center">
-                <div class="col-4">
-                    <section>
-                        <h4>Préstamo</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/contrato-credito.xhtml" target="noopener">Términos y condiciones de contratación del producto tu meta.kubo</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/lugares-pago.xhtml" target="noopener">Lugares de pago</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/simulador/simulador-acreditado.xhtml" target="noopener">Simulador de préstamo</a></li>
-                            <li><a class="link-modal-dialog" data-content-modal-dialog="modal-legal-cat"><strong>CAT ( Costo Anual Total)</strong></a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Inversión</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-global-caratula.xhtml" target="noopener">Términos y condiciones de contratación del producto kubo.global</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-impulso-caratula.xhtml" target="noopener">Términos y condiciones de contratación del producto kubo.impulso</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-plazo-caratula.xhtml" target="noopener">Términos y condiciones de contratación del producto kubo.plazofijo</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-contrato-garantia.xhtml" target="noopener">Términos y condiciones del contrato de garantía.</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/simulador-inversion.xhtml" target="noopener">Simulador de inversión</a></li>
-                            <li><a href="https://informes.kubofinanciero.com/consultores-oficiales" target="noopener">Lista de consultores autorizados</a></li>
-                            <li><a href="https://informes.kubofinanciero.com/reclutamiento-consultores" target="noopener">Quiero ser kubo.consultor</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-4">
-                    <section>
-                        <h4>Regulación</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/autorizacion-supervision.xhtml" target="noopener">Regulación Autorización para operar como Sociedad Financiera Popular (SFP) por la Comisión Nacional Bancaria y de Valores (CNBV).</a></li>
-                            <li><a href="http://diariooficial.gob.mx/nota_to_pdf.php?fecha=19/06/2013&edicion=MAT" target="noopener"><strong>Publicado en Diario Oficial de la Federación</strong> 19 de junio de 2013, pág. 106. Oficio 210-27544/2013 y 120/044/2013 CNBV.311.311.16 (7740) "2013-04-12" <10></a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Aclaraciones</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/formatos-aclaracion.xhtml" target="noopener">Formato de aclaración</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Servicios electrónicos</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-medios-caratula.xhtml" target="noopener">Términos y condiciones del contrato de servicios financieros electrónicos</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Despachos de Cobranza</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/templates/DespachosdeCobranza.pdf" target="noopener">Lista de despachos</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Promociones</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/templates/promociones.pdf" target="noopener">Lista de promociones</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-4">
-                    <section>
-                        <h4>Protección al cliente</h4>
-                        <ul>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/terminos-condiciones.xhtml" target="noopener">Términos y condiciones del portal</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/aviso-privacidad.xhtml" target="noopener">Aviso de privacidad</a></li>
-                            <li><a class="link-modal-dialog" data-content-modal-dialog="modal-une">UNE (Unidad Especializada de atención a usuarios de kubo.financiero)</a></li>
-                            <li><a class="link-modal-dialog" data-content-modal-dialog="modal-condusef">CONDUSEF</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/reportes-financieros/reportes-financieros-2018.xhtml" target="noopener">Reportes financieros</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/buro-entidades-financieras/prosofipo.xhtml" target="noopener">PROSOFIPO (Fondo de Protección de Sociedades Financieras Populares y de Protección a sus Ahorradores)</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/buro-entidades-financieras/buro-entidades-financieras.xhtml" target="noopener">Buró de Entidades Financieras</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/sistema-remuneracion.xhtml" target="noopener">Sistema de remuneración de los empleados y funcionarios de kubo.financiero</a></li>
-                            <li><a href="https://www.kubofinanciero.com/Kubo/Portal/consulta-costos-comisiones/consulta-costos-comisiones.xhtml" target="noopener"><strong>Consulta los costos y comisiones de nuestros productos</strong></a></li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="container-center">
-                <hr>
-                <div class="col-1 logo-cuadrado">
-                    <img src="https://informes.kubofinanciero.com/hubfs/resources/img/footer/LogoCuadrado-black.svg" alt="logo kubofinacieron black">
-                </div>
-                <div class="col-6">
-                    <section>
-                        <h4>Contacto</h4>
-                        <ul>
-                            <li class="razon-social">KU-BO FINANCIERO, S.A. DE C.V., S.F.P.</li>
-                            <li class="direction-kubo"><strong>Atención al público:</strong><br>Barranca del Muerto no. 40 Col. Florida, Delegación Álvaro Obregón, C.P. 01030, Ciudad de México.</li>
-                            <li class="horarios">Horario de Atención: Lunes a Viernes de 9:00 a 18:00 hrs.</li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-3">
-                    <section>
-                        <ul>
-                            <li class="phone"><a href="tel:(55)62690024" target="noopener">(55)62690024</a></li>
-                            <li class="email"><a href="mailto:informes@kubofinanciero.com" target="noopener">informes@kubofinanciero.com</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-2">
-                    <section>
-                        <h4>Redes Sociales</h4>
-                        <ul>
-                            <li>
-                                <a href="https://es-la.facebook.com/kubofinanciero/" aria-label="kubofinancieron en facebook" class="facebook-icon" target="noopener"></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/kubofinanciero?lang=es" aria-label="kubofinanciero en twitter" class="twitter-icon" target="noopener"></a>
-                            </li>
-                            <li>
-                                <a href="https://mx.linkedin.com/company/kubo-financiero" aria-label="kubofinacieron en linkedin" class="linkedin-icon" target="noopener"></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/kubofinanciero/?hl=es-la" aria-label="kubofinanciero en instagram" class="instagram-icon" target="noopener"></a>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </div>
+        <div id="footer-js"></div>
         <section class="modales-footer">
             <article>
                 <style>

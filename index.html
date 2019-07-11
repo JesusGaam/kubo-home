@@ -2,839 +2,625 @@
 <html lang="es" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-  <title>kubofinanciero.com</title>
-  <link rel="stylesheet" href="css/estilos-basicos.css">
-  <link href="css/kubo-form-1.2.2.css" rel="stylesheet" media="nope!" onload="this.media='all'">
-  <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script defer src="js/javascript-basico.js"></script>
-  <script defer
-    src="https://informes.kubofinanciero.com/hs-fs/hub/2511529/hub_generated/template_assets/1555020196516/js/kubo-utilidades-V1-2.min.js"></script>
-  <script defer src="https://use.fontawesome.com/666aa4b451.js"></script>
-  <style>
-    :root {
-      --top-content-header: initial;
-      --top-content-header-mobile: initial;
-
-      --background-image-header: url('https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/img-banner.jpg');
-      --background-image-header-mobile: url('https://cdn2.hubspot.net/hubfs/2511529/resources/img/header/LP-prestamos-girl.jpg');
-
-      --background-position-header: center center;
-      --background-position-header-mobile: center center;
-    }
-  </style>
+    <title>kubofinanciero.com</title>
+    <link rel="stylesheet" href="css/estilos-basicos.css">
+    <link href="css/kubo-form-1.2.2.css" rel="stylesheet" media="nope!" onload="this.media='all'">
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script defer src="js/javascript-basico.js"></script>
+    <script defer src="https://informes.kubofinanciero.com/hs-fs/hub/2511529/hub_generated/template_assets/1555020196516/js/kubo-utilidades-V1-2.min.js"></script>
+    <script defer src="https://use.fontawesome.com/666aa4b451.js"></script>
+    <script defer src="components/footer.js"></script>
+    <script defer src="components/header-menu.js"></script>
+    <style>
+         :root {
+            --top-content-header: initial;
+            --top-content-header-mobile: initial;
+            --background-image-header: url('https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/img-banner.jpg');
+            --background-image-header-mobile: url('https://cdn2.hubspot.net/hubfs/2511529/resources/img/header/LP-prestamos-girl.jpg');
+            --background-position-header: center center;
+            --background-position-header-mobile: center center;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <div class="container header-black">
-      <div class="container-center">
-        <img src="https://informes.kubofinanciero.com/hubfs/resources/img/logos/logo-kubo-horizontal.png"
-          alt="Logotipo del sitio">
-        <ul class="right-elements">
-          <li class="desktop-element"><a class="iniciar-sesion link-modal-dialog"
-              data-content-modal-dialog="modal-login">Iniciar sesión</a></li>
-          <li class="phone"><a><i class="fa fa-phone-square"></i> <span class="desktop-element">(55)
+    <header>
+        <div class="container header-black">
+            <div class="container-center">
+                <img src="https://informes.kubofinanciero.com/hubfs/resources/img/logos/logo-kubo-horizontal.png" alt="Logotipo del sitio">
+                <ul class="right-elements">
+                    <li class="desktop-element"><a class="iniciar-sesion link-modal-dialog" data-content-modal-dialog="modal-login">Iniciar sesión</a></li>
+                    <li class="phone"><a><i class="fa fa-phone-square"></i> <span class="desktop-element">(55)
                 <strong>62690024</strong></span></a></li>
-          <li class="mobile-element"><i class="fa fa-bars" style="color:#8FC450;" id="hamburger-menu"></i></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <div class="container" id="header-menu">
-    <div class="container-center">
-      <nav>
-        <ul>
-          <li class="mobile-element"><a href="#iniciarSesion" class=" link-modal-dialog"
-              data-content-modal-dialog="modal-login">Iniciar sesión</a></li>
-          <li><a href="#inicio">Préstamos</a></li>
-          <li><a href="#Loremipsum">Inversión</a></li>
-          <li><a href="#dolorsitamet">Quienes Somos</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li class="especial"><a href="#gana300">¡Gana $300!</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <main>
-    <div class="container" id="header">
-      <div class="container-center">
-        <h1>Préstamos Personales en Línea e Inversiones</h1>
-        <div id="header-options">
-          <style>
-            #header-options .col-4 {
-              text-align: center;
-            }
-
-            #header-options .col-4 .simular {
-              display: block;
-              font-size: 20px;
-            }
-
-            #header-options .col-4 .simular.naranja {
-              color: var(--orange-color);
-            }
-
-            @media (min-width: 769px) {
-              #header-options .col-4 {
-                padding-top: 50px;
-              }
-
-              #header-options .col-4 .callAction {
-                width: 200px;
-              }
-
-              #header-options .col-4 .simular {
-                margin-top: 20px;
-              }
-            }
-
-            @media (max-width: 768px) {
-              #header-options div:nth-child(3) {
-                padding-top: 60px;
-              }
-
-              #header-options .col-4:nth-child(4) {
-                padding-top: 30px;
-              }
-
-              #header-options .col-4 .simular {
-                margin-top: 10px;
-              }
-            }
-          </style>
-          <div class="col-2"></div>
-          <div class="col-4">
-            <a class="callAction btnNaranja"
-              href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un
+                    <li class="mobile-element"><i class="fa fa-bars" style="color:#8FC450;" id="hamburger-menu"></i></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="header-menu"></div>
+    <main>
+        <div class="container" id="header">
+            <div class="container-center">
+                <h1>Préstamos Personales en Línea e Inversiones</h1>
+                <div id="header-options">
+                    <style>
+                        #header-options .col-4 {
+                            text-align: center;
+                        }
+                        
+                        #header-options .col-4 .simular {
+                            display: block;
+                            font-size: 20px;
+                        }
+                        
+                        #header-options .col-4 .simular.naranja {
+                            color: var(--orange-color);
+                        }
+                        
+                        @media (min-width: 769px) {
+                            #header-options .col-4 {
+                                padding-top: 50px;
+                            }
+                            #header-options .col-4 .callAction {
+                                width: 200px;
+                            }
+                            #header-options .col-4 .simular {
+                                margin-top: 20px;
+                            }
+                        }
+                        
+                        @media (max-width: 768px) {
+                            #header-options div:nth-child(3) {
+                                padding-top: 60px;
+                            }
+                            #header-options .col-4:nth-child(4) {
+                                padding-top: 30px;
+                            }
+                            #header-options .col-4 .simular {
+                                margin-top: 10px;
+                            }
+                        }
+                    </style>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un
               prestamo</a>
-            <a class="simular naranja"
-              href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Simular
+                        <a class="simular" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Simular
               mi préstamo</a>
-          </div>
-          <div class="col-4">
-            <a class="callAction btnPrimario"
-              href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
+                    </div>
+                    <div class="col-4">
+                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
               invertir</a>
-            <a class="simular"
-              href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/simulador-inversion.xhtml">Simular mi
+                        <a class="simular " href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/simulador-inversion.xhtml">Simular mi
               inversión</a>
-          </div>
-          <div class="col-2"></div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container" id="video-kubo">
-      <style>
-        #video-kubo {
-          padding-top: 20px;
-          padding-bottom: 60px;
-          background: var(--gray-background-color);
-        }
-        #video-kubo h2{
-          text-align: center;
-        }
-      </style>
-      <div class="container-center">
-        <h2>¡Haz realidad tus sueños!</h2>
-      </div>
-    </div>
-    <div class="container" id="quienes-somos">
-      <style>
-        #quienes-somos {
-          padding-top: 60px;
-          padding-bottom: 60px;
-        }
-
-        #quienes-somos>div>h2:first-child {
-          margin-bottom: 20px;
-        }
-      </style>
-      <div class="container-center">
-        <h2>Quiénes Somos</h2>
-        <p>Somos una plataforma digital para solicitar préstamos personales en línea y para invertir dinero en productos
-          como kubo.plazofijo (inversión a plazo fijo) y en los proyectos de kubo.impulso (inversión en préstamos
-          personales).</p>
-        <p>Estamos regulados por la Comisión Nacional Bancaria y de Valores (CNBV), por lo que para ser candidato y
-          poder solicitar un préstamo o crédito debes contar con buen historial crediticio y llenar la solicitud de
-          préstamo personal. Un asesor estará para apoyarte en cada paso y así poder recibir un préstamo seguro y
-          confiable en menos de 24 horas.</p>
-        <h2>Préstamos personales en línea</h2>
-        <p>Para solicitar tu préstamo personal en línea sólo debes registrarte en kubo.financiero con tu correo y dar
-          los datos que se te piden. El proceso es 100% por Internet, ¡incluida la firma de tu contrato!</p>
-        <h2>Inversiones</h2>
-        <p>¡Invierte con nosotros! Abre tu cuenta de inversionista y conoce los distintos productos que tenemos para ti;
-          kubo.impulso y kubo.plazofijo, donde podrás invertir dinero y verlo crecer.</p>
-        <p>kubo.plazofijo es una inversión a plazo fijo donde puedes obtener hasta el 11% de rendimiento anual.</p>
-        <p>Conoce nuestro marketplace de kubo.impulso en el que puedes invertir en distintos proyectos de buenos
-          pagadores. Este producto sigue el modelo de préstamos de persona a persona (peer to peer lending) donde puedes
-          apoyar proyectos personales y generar intereses.</p>
-        <p>Invierte en grupo con kubo.plus; invita a tus amigos y obtén un rendimiento preferencial. Es importante
-          recordar que cada integrante del grupo debe de tener una cuenta personal en kubo.financiero.</p>
-      </div>
-    </div>
-    <div class="container" id="resenas">
-      <style>
-        #resenas {
-          height: 260px;
-          background: url(https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/personas.jpg) repeat
-        }
-
-        #resenas .resena-cliente p {
-          margin: 0;
-          padding: 0;
-          text-shadow: 0 0 1px rgba(153, 153, 153, .8)
-        }
-
-        #resenas .resena-cliente p:nth-child(1) {
-          margin: 0;
-          padding: 0;
-          font-weight: lighter;
-          color: #fff
-        }
-
-        #resenas .resena-cliente p:nth-child(2) {
-          font-weight: 700;
-          text-align: right;
-          color: var(--green-color-secundary)
-        }
-
-        @media (min-width:769px) {
-          #resenas .resena-cliente {
-            padding-top: 45px;
-            padding-bottom: 0;
-          }
-
-          #resenas .resena-cliente p {
-            font-size: 26px
-          }
-        }
-
-        @media (max-width:768px) {
-          #resenas .resena-cliente {
-            padding-top: 40px
-          }
-
-          #resenas .resena-cliente p {
-            font-size: 20px
-          }
-        }
-      </style>
-      <script>
-        window.addEventListener("load", function () {
-          var nResena = 0;
-          var resenas = [{
-            "autor": "Mirelle, inversionista",
-            "resena": "Lo que me gusta de kubo es que ganas con sentido y ayudas a que otras personas también ganen y crezcan."
-          }, {
-            "autor": "Ana Lilia, acreditada",
-            "resena": "Soy una persona trabajadora y comprometida, tengo mi propio negocio y quiero continuar ampliándolo."
-          }, {
-            "autor": "Edgar, acreditado",
-            "resena": "kubo.financiero confío en mí y yo respondo en mis pagos. Ese es el gran secreto para tener un aliado para tu negocio. Cuentas claras, amistades largas."
-          }, {
-            "autor": "Claudia, inversionista",
-            "resena": "Pensaba que invertir era sólo algo para mi papá y mis tíos, de señores. Que debías tener millones."
-          }, {
-            "autor": "Hernán, acreditado",
-            "resena": "Reflexiones financieras excelentes que nos permiten ampliar nuestro panorama de vida."
-          }, {
-            "autor": "Salvador, inversionista",
-            "resena": "El dejar tu dinero en el banco es aburrido, al invertirlo lo haces dinero vivo."
-          }];
-          changeReview();
-          window.setInterval(changeReview, 10000);
-
-          function changeReview() {
-            console.log(resenas[nResena].autor)
-            $("#resenas .resena-cliente p:nth-child(1) i").html(resenas[nResena].resena);
-            $("#resenas .resena-cliente p:nth-child(2)").html(resenas[nResena].autor);
-            nResena = nResena < 5 ? nResena + 1 : 0
-          }
-        }, false);
-      </script>
-      <div class="container-center">
-        <div>
-          <div class="col-2"></div>
-          <div class="col-8 resena-cliente">
-            <p>&ldquo;<i></i>&rdquo;</p>
-            <p></p>
-          </div>
-          <div class="col-2"></div>
+        <div class="container" id="video-kubo">
+            <style>
+                #video-kubo {
+                    padding-top: 20px;
+                    padding-bottom: 60px;
+                    background: var(--gray-background-color);
+                }
+                
+                #video-kubo h2 {
+                    text-align: center;
+                }
+            </style>
+            <div class="container-center">
+                <h2>¡Haz realidad tus sueños!</h2>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container" id="nos-hace-unicos">
-      <style>
-        #nos-hace-unicos {
-          padding-top: 60px;
-          padding-bottom: 60px;
-          background-color: var(--gray-background-color);
-        }
-
-        #nos-hace-unicos img {
-          height: 100px;
-        }
-        #nos-hace-unicos h2, 
-        #nos-hace-unicos h3{
-          text-align: center;
-        }
-
-        #nos-hace-unicos h2{
-          margin-bottom: 0;
-        }
-        
-        #nos-hace-unicos h3 {
-          margin: 12px 0;
-        }
-
-        @media (min-width: 769px) {
-          #nos-hace-unicos h2 {
-            margin-bottom: 40px;
-          }
-
-          #nos-hace-unicos div>.col-4:first-child {
-            padding-right: 20px;
-          }
-
-          #nos-hace-unicos div>.col-4:nth-child(2) {
-            padding: 0 10px;
-          }
-
-          #nos-hace-unicos div>.col-4:nth-child(3) {
-            padding-left: 20px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          #nos-hace-unicos .col-4 {
-            margin-top: 60px;
-          }
-
-          #nos-hace-unicos p {
-            text-align: center;
-          }
-
-          #nos-hace-unicos div>.col-4:nth-child(3) img {
-            margin-bottom: -16px;
-          }
-        }
-      </style>
-      <div class="container-center">
-        <h2>Lo que nos hace únicos</h2>
-        <div>
-          <div class="col-4">
-            <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-1.svg"
-              alt="Certificado de seguridad"></div>
-            <h3>Plataforma regulada y segura</h3>
-            <p>Estamos <strong>regulados</strong> por la <strong>Comisión Nacional Bancaria y de Valores</strong>, por
-              lo cual tu dinero está seguro.</p>
-          </div>
-          <div class="col-4">
-              <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-2.svg"
-                alt="Manos tomando dinero"></div>
-            <h3>Hacemos las finanzas más humanas</h3>
-            <p>Creamos <strong>comunidad</strong>, las personas son lo más <strong>importante</strong> para nosotros.
-            </p>
-          </div>
-          <div class="col-4">
-              <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-3.svg"
-                alt="anteojos"></div>
-            <h3>Transparencia total y sin burocracia</h3>
-            <p>Transacciones transparentes y sin burocracia. Conoce dónde estás invirtiendo o quién fondea tu préstamo
-              en cualquier momento.</p>
-          </div>
+        <div class="container" id="quienes-somos">
+            <style>
+                #quienes-somos {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+                
+                #quienes-somos>div>h2:first-child {
+                    margin-bottom: 20px;
+                }
+            </style>
+            <div class="container-center">
+                <h2>Quiénes Somos</h2>
+                <p>Somos una plataforma digital para solicitar préstamos personales en línea y para invertir dinero en productos como kubo.plazofijo (inversión a plazo fijo) y en los proyectos de kubo.impulso (inversión en préstamos personales).
+                </p>
+                <p>Estamos regulados por la Comisión Nacional Bancaria y de Valores (CNBV), por lo que para ser candidato y poder solicitar un préstamo o crédito debes contar con buen historial crediticio y llenar la solicitud de préstamo personal. Un asesor
+                    estará para apoyarte en cada paso y así poder recibir un préstamo seguro y confiable en menos de 24 horas.</p>
+                <h2>Préstamos personales en línea</h2>
+                <p>Para solicitar tu préstamo personal en línea sólo debes registrarte en kubo.financiero con tu correo y dar los datos que se te piden. El proceso es 100% por Internet, ¡incluida la firma de tu contrato!</p>
+                <h2>Inversiones</h2>
+                <p>¡Invierte con nosotros! Abre tu cuenta de inversionista y conoce los distintos productos que tenemos para ti; kubo.impulso y kubo.plazofijo, donde podrás invertir dinero y verlo crecer.</p>
+                <p>kubo.plazofijo es una inversión a plazo fijo donde puedes obtener hasta el 11% de rendimiento anual.</p>
+                <p>Conoce nuestro marketplace de kubo.impulso en el que puedes invertir en distintos proyectos de buenos pagadores. Este producto sigue el modelo de préstamos de persona a persona (peer to peer lending) donde puedes apoyar proyectos personales
+                    y generar intereses.</p>
+                <p>Invierte en grupo con kubo.plus; invita a tus amigos y obtén un rendimiento preferencial. Es importante recordar que cada integrante del grupo debe de tener una cuenta personal en kubo.financiero.</p>
+            </div>
         </div>
-      </div>
-    </div>
+        <div class="container" id="resenas">
+            <style>
+                #resenas {
+                    height: 260px;
+                    background: url(https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/personas.jpg) repeat
+                }
+                
+                #resenas .resena-cliente p {
+                    margin: 0;
+                    padding: 0;
+                    text-shadow: 0 0 1px rgba(153, 153, 153, .8)
+                }
+                
+                #resenas .resena-cliente p:nth-child(1) {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: lighter;
+                    color: #fff
+                }
+                
+                #resenas .resena-cliente p:nth-child(2) {
+                    font-weight: 700;
+                    text-align: right;
+                    color: var(--green-color-secundary)
+                }
+                
+                @media (min-width:769px) {
+                    #resenas .resena-cliente {
+                        padding-top: 45px;
+                        padding-bottom: 0;
+                    }
+                    #resenas .resena-cliente p {
+                        font-size: 26px
+                    }
+                }
+                
+                @media (max-width:768px) {
+                    #resenas .resena-cliente {
+                        padding-top: 40px
+                    }
+                    #resenas .resena-cliente p {
+                        font-size: 20px
+                    }
+                }
+            </style>
+            <script>
+                window.addEventListener("load", function() {
+                    var nResena = 0;
+                    var resenas = [{
+                        "autor": "Mirelle, inversionista",
+                        "resena": "Lo que me gusta de kubo es que ganas con sentido y ayudas a que otras personas también ganen y crezcan."
+                    }, {
+                        "autor": "Ana Lilia, acreditada",
+                        "resena": "Soy una persona trabajadora y comprometida, tengo mi propio negocio y quiero continuar ampliándolo."
+                    }, {
+                        "autor": "Edgar, acreditado",
+                        "resena": "kubo.financiero confío en mí y yo respondo en mis pagos. Ese es el gran secreto para tener un aliado para tu negocio. Cuentas claras, amistades largas."
+                    }, {
+                        "autor": "Claudia, inversionista",
+                        "resena": "Pensaba que invertir era sólo algo para mi papá y mis tíos, de señores. Que debías tener millones."
+                    }, {
+                        "autor": "Hernán, acreditado",
+                        "resena": "Reflexiones financieras excelentes que nos permiten ampliar nuestro panorama de vida."
+                    }, {
+                        "autor": "Salvador, inversionista",
+                        "resena": "El dejar tu dinero en el banco es aburrido, al invertirlo lo haces dinero vivo."
+                    }];
+                    changeReview();
+                    window.setInterval(changeReview, 10000);
 
-    <div class="container" id="crear-cuenta">
-      <style>
-        #crear-cuenta {
-          padding-top: 60px;
-          padding-bottom: 60px;
-        }
-        #crear-cuenta h2{
-          text-align: center;
-        }
-
-        #crear-cuenta .col-4 {
-          text-align: center;
-        }
-
-        @media (min-width: 769px) {
-          #crear-cuenta .col-4 {
-            padding-top: 40px;
-          }
-
-          #crear-cuenta .col-4 .callAction {
-            width: 200px;
-          }
-
-          #crear-cuenta .col-4 .simular {
-            margin-top: 20px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          #crear-cuenta .callAction.btnNaranja {
-            margin: 30px 0
-          }
-        }
-      </style>
-      <div class="container-center">
-        <div>
-          <div class="col-2"></div>
-          <div class="col-8">
-            <h2>¡Regístrate ya! Forma parte de nuestra comunidad digital</h2>
-          </div>
-          <div class="col-2"></div>
+                    function changeReview() {
+                        $("#resenas .resena-cliente p:nth-child(1) i").html(resenas[nResena].resena);
+                        $("#resenas .resena-cliente p:nth-child(2)").html(resenas[nResena].autor);
+                        nResena = nResena < 5 ? nResena + 1 : 0
+                    }
+                }, false);
+            </script>
+            <div class="container-center">
+                <div>
+                    <div class="col-2"></div>
+                    <div class="col-8 resena-cliente">
+                        <p>&ldquo;<i></i>&rdquo;</p>
+                        <p></p>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
         </div>
-        <div>
-          <div class="col-2"></div>
-          <div class="col-4">
-            <a class="callAction btnNaranja"
-              href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un
+        <div class="container" id="nos-hace-unicos">
+            <style>
+                #nos-hace-unicos {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    background-color: var(--gray-background-color);
+                }
+                
+                #nos-hace-unicos img {
+                    height: 100px;
+                }
+                
+                #nos-hace-unicos h2,
+                #nos-hace-unicos h3 {
+                    text-align: center;
+                }
+                
+                #nos-hace-unicos h2 {
+                    margin-bottom: 0;
+                }
+                
+                #nos-hace-unicos h3 {
+                    margin: 12px 0;
+                }
+                
+                @media (min-width: 769px) {
+                    #nos-hace-unicos h2 {
+                        margin-bottom: 40px;
+                    }
+                    #nos-hace-unicos div>.col-4:first-child {
+                        padding-right: 20px;
+                    }
+                    #nos-hace-unicos div>.col-4:nth-child(2) {
+                        padding: 0 10px;
+                    }
+                    #nos-hace-unicos div>.col-4:nth-child(3) {
+                        padding-left: 20px;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    #nos-hace-unicos .col-4 {
+                        margin-top: 60px;
+                    }
+                    #nos-hace-unicos p {
+                        text-align: center;
+                    }
+                    #nos-hace-unicos div>.col-4:nth-child(3) img {
+                        margin-bottom: -16px;
+                    }
+                }
+            </style>
+            <div class="container-center">
+                <h2>Lo que nos hace únicos</h2>
+                <div>
+                    <div class="col-4">
+                        <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-1.svg" alt="Certificado de seguridad"></div>
+                        <h3>Plataforma regulada y segura</h3>
+                        <p>Estamos <strong>regulados</strong> por la <strong>Comisión Nacional Bancaria y de Valores</strong>, por lo cual tu dinero está seguro.</p>
+                    </div>
+                    <div class="col-4">
+                        <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-2.svg" alt="Manos tomando dinero"></div>
+                        <h3>Hacemos las finanzas más humanas</h3>
+                        <p>Creamos <strong>comunidad</strong>, las personas son lo más <strong>importante</strong> para nosotros.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <div style="text-align: center;"><img src="https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/icono-3.svg" alt="anteojos"></div>
+                        <h3>Transparencia total y sin burocracia</h3>
+                        <p>Transacciones transparentes y sin burocracia. Conoce dónde estás invirtiendo o quién fondea tu préstamo en cualquier momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="crear-cuenta">
+            <style>
+                #crear-cuenta {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+                
+                #crear-cuenta h2 {
+                    text-align: center;
+                }
+                
+                #crear-cuenta .col-4 {
+                    text-align: center;
+                }
+                
+                @media (min-width: 769px) {
+                    #crear-cuenta .col-4 {
+                        padding-top: 40px;
+                    }
+                    #crear-cuenta .col-4 .callAction {
+                        width: 200px;
+                    }
+                    #crear-cuenta .col-4 .simular {
+                        margin-top: 20px;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    #crear-cuenta .callAction.btnPrimario {
+                        margin: 30px 0
+                    }
+                }
+            </style>
+            <div class="container-center">
+                <div>
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h2>¡Regístrate ya! Forma parte de nuestra comunidad digital</h2>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un
               prestamo</a>
-          </div>
-          <div class="col-4">
-            <a class="callAction btnPrimario"
-              href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
+                    </div>
+                    <div class="col-4">
+                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
               invertir</a>
-          </div>
-          <div class="col-2"></div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="container">
-      <div class="container-center">
-        <div class="col-4">
-          <section>
-            <h4>Préstamo</h4>
-            <ul>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/contrato-credito.xhtml"
-                  target="noopener">Términos y condiciones de contratación del producto tu meta.kubo</a></li>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/lugares-pago.xhtml"
-                  target="noopener">Lugares de pago</a></li>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/simulador/simulador-acreditado.xhtml"
-                  target="noopener">Simulador de préstamo</a></li>
-              <li><a class="link-modal-dialog" data-content-modal-dialog="modal-legal-cat"><strong>CAT ( Costo Anual
-                    Total)</strong></a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Inversión</h4>
-            <ul>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-global-caratula.xhtml"
-                  target="noopener">Términos y condiciones de contratación del producto kubo.global</a></li>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-impulso-caratula.xhtml"
-                  target="noopener">Términos y condiciones de contratación del producto kubo.impulso</a></li>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-plazo-caratula.xhtml"
-                  target="noopener">Términos y condiciones de contratación del producto kubo.plazofijo</a></li>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-contrato-garantia.xhtml"
-                  target="noopener">Términos y condiciones del contrato de garantía.</a></li>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/simulador-inversion.xhtml"
-                  target="noopener">Simulador de inversión</a></li>
-              <li><a href="https://informes.kubofinanciero.com/consultores-oficiales" target="noopener">Lista de
-                  consultores autorizados</a></li>
-              <li><a href="https://informes.kubofinanciero.com/reclutamiento-consultores" target="noopener">Quiero ser
-                  kubo.consultor</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-4">
-          <section>
-            <h4>Regulación</h4>
-            <ul>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/autorizacion-supervision.xhtml"
-                  target="noopener">Regulación Autorización para operar como Sociedad Financiera Popular (SFP) por la
-                  Comisión Nacional Bancaria y de Valores (CNBV).</a></li>
-              <li><a href="http://diariooficial.gob.mx/nota_to_pdf.php?fecha=19/06/2013&edicion=MAT"
-                  target="noopener"><strong>Publicado en Diario Oficial de la Federación</strong> 19 de junio de 2013,
-                  pág. 106. Oficio 210-27544/2013 y 120/044/2013 CNBV.311.311.16 (7740) "2013-04-12" <10></a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Aclaraciones</h4>
-            <ul>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/formatos-aclaracion.xhtml"
-                  target="noopener">Formato de aclaración</a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Servicios electrónicos</h4>
-            <ul>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/ley-transparencia/transparencia-kubo-medios-caratula.xhtml"
-                  target="noopener">Términos y condiciones del contrato de servicios financieros electrónicos</a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Despachos de Cobranza</h4>
-            <ul>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/templates/DespachosdeCobranza.pdf"
-                  target="noopener">Lista de despachos</a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Promociones</h4>
-            <ul>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/templates/promociones.pdf" target="noopener">Lista
-                  de promociones</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-4">
-          <section>
-            <h4>Protección al cliente</h4>
-            <ul>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/terminos-condiciones.xhtml"
-                  target="noopener">Términos y condiciones del portal</a></li>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/aviso-privacidad.xhtml"
-                  target="noopener">Aviso de privacidad</a></li>
-              <li><a class="link-modal-dialog" data-content-modal-dialog="modal-une">UNE (Unidad Especializada de
-                  atención a usuarios de kubo.financiero)</a></li>
-              <li><a class="link-modal-dialog" data-content-modal-dialog="modal-condusef">CONDUSEF</a></li>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/reportes-financieros/reportes-financieros-2018.xhtml"
-                  target="noopener">Reportes financieros</a></li>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/buro-entidades-financieras/prosofipo.xhtml"
-                  target="noopener">PROSOFIPO (Fondo de Protección de Sociedades Financieras Populares y de Protección a
-                  sus Ahorradores)</a></li>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/buro-entidades-financieras/buro-entidades-financieras.xhtml"
-                  target="noopener">Buró de Entidades Financieras</a></li>
-              <li><a href="https://www.kubofinanciero.com/Kubo/Portal/aviso-legal/sistema-remuneracion.xhtml"
-                  target="noopener">Sistema de remuneración de los empleados y funcionarios de kubo.financiero</a></li>
-              <li><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/consulta-costos-comisiones/consulta-costos-comisiones.xhtml"
-                  target="noopener"><strong>Consulta los costos y comisiones de nuestros productos</strong></a></li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="container-center">
-        <hr>
-        <div class="col-1 logo-cuadrado">
-          <img src="https://informes.kubofinanciero.com/hubfs/resources/img/footer/LogoCuadrado-black.svg"
-            alt="logo kubofinacieron black">
-        </div>
-        <div class="col-6">
-          <section>
-            <h4>Contacto</h4>
-            <ul>
-              <li class="razon-social">KU-BO FINANCIERO, S.A. DE C.V., S.F.P.</li>
-              <li class="direction-kubo"><strong>Atención al público:</strong><br>Barranca del Muerto no. 40 Col.
-                Florida, Delegación Álvaro Obregón, C.P. 01030, Ciudad de México.</li>
-              <li class="horarios">Horario de Atención: Lunes a Viernes de 9:00 a 18:00 hrs.</li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-3">
-          <section>
-            <ul>
-              <li class="phone"><a href="tel:(55)62690024" target="noopener">(55)62690024</a></li>
-              <li class="email"><a href="mailto:informes@kubofinanciero.com"
-                  target="noopener">informes@kubofinanciero.com</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-2">
-          <section>
-            <h4>Redes Sociales</h4>
-            <ul>
-              <li><a href="https://es-la.facebook.com/kubofinanciero/" aria-label="kubofinancieron en facebook"
-                  class="facebook-icon" target="noopener"></a></li>
-              <li><a href="https://twitter.com/kubofinanciero?lang=es" aria-label="kubofinanciero en twitter"
-                  class="twitter-icon" target="noopener"></a></li>
-              <li><a href="https://mx.linkedin.com/company/kubo-financiero" aria-label="kubofinacieron en linkedin"
-                  class="linkedin-icon" target="noopener"></a></li>
-              <li><a href="https://www.instagram.com/kubofinanciero/?hl=es-la" aria-label="kubofinanciero en instagram"
-                  class="instagram-icon" target="noopener"></a></li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </div>
-    <section class="modales-footer">
-      <article>
-        <style>
-          .modal-legal-cat hr {
-            margin: 24px 0 30px 0;
-            border: solid 1px #d9d9d9;
-          }
-
-          @media (min-width: 769px) {
-            .modal-legal-cat {
-              width: 650px
-            }
-          }
-        </style>
-        <div id="modal-legal-cat" style="display:none;">
-          <h3>Costo Anual Total (CAT) Promedio 56.4% sin IVA.</h3>
-          <hr>
-          <p>Para fines informativos y de comparación exclusivamente.</p>
-          <p>El cálculo incluye todos los productos de crédito.</p>
-          <p>Fecha de cálculo al 1 de Enero del 2019 con una tasa de interés ponderada del 40.28% (Sin IVA) Tasa Fija
-            Anual Simple, con monto promedio de los créditos de $42,553.84</p>
-          <p>Créditos sujetos a aprobación.</p>
-        </div>
-      </article>
-      <article>
-        <style>
-          .modal-condusef hr {
-            margin: 24px 0 30px 0;
-            border: solid 1px #d9d9d9;
-          }
-
-          .modal-condusef a {
-            color: var(--green-color);
-            text-decoration: none;
-          }
-
-          .modal-condusef a:hover {
-            color: var(--green-color);
-            text-decoration: underline;
-          }
-
-          .modal-condusef ul {
-            list-style: none;
-            line-height: 1.8;
-            padding-left: 20px;
-          }
-
-          @media (min-width: 769px) {
-            .modal-condusef {
-              width: 650px
-            }
-          }
-        </style>
-        <div id="modal-condusef" style="display:none;">
-          <h3>CONDUSEF</h3>
-          <hr>
-          <p>Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros</p>
-          <h4><strong>Centro de Atención Telefónica</strong></h4>
-          <ul>
-            <li><a href="tel:53400999">53-40-09-99</a></li>
-            <li><a href="tel:018009998080">01-800-999-80-80</a></li>
-            <li><a href="https://www.gob.mx/condusef" target="noopener">www.condusef.gob.mx</a></li>
-          </ul>
-        </div>
-      </article>
-      <article>
-        <style>
-          .modal-une hr {
-            margin: 24px 0 30px 0;
-            border: solid 1px #d9d9d9;
-          }
-
-          .modal-une .contacto {
-            margin-top: 30px
-          }
-
-          .modal-une a {
-            color: var(--green-color);
-            text-decoration: none
-          }
-
-          .modal-une a:hover {
-            color: var(--green-color);
-            text-decoration: underline
-          }
-
-          @media (min-width: 769px) {
-            .modal-une {
-              width: 650px
-            }
-          }
-
-          @media (max-width:768px) {
-            .modal-une p {
-              font-size: 15px;
-              margin: 8px 0;
-              line-height: 1.4;
-            }
-
-            .modal-une .modal-une .contacto {
-              margin-top: 20px
-            }
-          }
-        </style>
-        <div id="modal-une" style="display:none;">
-          <h3>Unidad Especializada de Atención a Usuarios (UNE) Ku-bo Financiero, S.A. de C.V., S.F.P.</h3>
-          <hr>
-          <p><strong>Queremos ofrecerle un servicio eficiente.</strong></p>
-          <p>Favor de dirigir sus quejas, sugerencias, dudas o solicitudes de aclaración a:</p>
-          <div class="contacto">
-            <p><strong>Dayana Karen Peña Cortés</strong></p>
-            <p>Titular de UNE y Encargado Regional</p>
-            <p>Dirección: Barranca del Muerto No. 40 Col. Florida, Del. Álvaro Obregón C.P. 01030, Ciudad de México (55)
-              88-80- 34-66</p>
-            <p>Correo electrónico: <a href="mailto:une@kubofinanciero.com">une@kubofinanciero.com</a></p>
-            <p>Horario de atención: Lunes a Viernes 09:00 a 18:00 horas</p>
-          </div>
-          <div class="contacto">
-            <p><strong>Dayana Karen Peña Cortés</strong></p>
-            <p>Titular de UNE y Encargado Regional</p>
-            <p>Dirección: Barranca del Muerto No. 40 Col. Florida, Del. Álvaro Obregón C.P. 01030, Ciudad de México (55)
-              88-80- 34-66</p>
-            <p>Correo electrónico: <a href="mailto:une@kubofinanciero.com">une@kubofinanciero.com</a></p>
-            <p>Horario de atención: Lunes a Viernes 09:00 a 18:00 horas</p>
-          </div>
-        </div>
-      </article>
-    </section>
-  </footer>
-  <div id="modal-dialog">
-    <div class="container">
-      <div class="close-modal"></div>
-      <div class="dinamic-content"></div>
-    </div>
-  </div>
-  <article>
-    <style>
-      .modal-login h2 {
-        text-align: left;
-      }
-
-      .modal-login .kubo-form {
-        padding-top: 14px;
-      }
-
-      .modal-login a:not(.callAction) {
-        font-size: 18px;
-        color: var(--green-color);
-        text-decoration: underline;
-      }
-
-      .modal-login a:not(.callAction):hover {
-        text-decoration: none;
-      }
-
-      .modal-login .iniciar-sesion {
-        margin: 20px 0;
-      }
-
-      .modal-login .text-link {
-        font-weight: lighter;
-        font-size: 18px;
-        text-align: center;
-        line-height: 1.8;
-        color: var(--text-color)
-      }
-
-      .modal-login .only-text {
-        padding: 8px 0 12px 0;
-        font-size: 20px;
-        color: #b4b4b4;
-      }
-
-      .modal-login .cnt-login-background {
-        position: absolute;
-        top: -50px;
-        left: -50px;
-        background: url('https://informes.kubofinanciero.com/hubfs/resources/img/personas-con-celular.jpg') -135px center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-
-        -webkit-border-top-left-radius: 5px;
-        -webkit-border-bottom-left-radius: 5px;
-        -moz-border-radius-topleft: 5px;
-        -moz-border-radius-bottomleft: 5px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-      }
-
-      @media (min-width: 769px) {
-        .modal-login h2 {
-          margin-bottom: 20px;
-        }
-
-        .modal-login {
-          width: 780px
-        }
-
-        .modal-login .cnt-login {
-          padding-left: 60px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .modal-login h2 {
-          font-size: 22px;
-        }
-
-        .modal-login .kubo-form {
-          padding: 14px 0 20px 0;
-        }
-
-        .modal-login label {
-          line-height: 30px;
-        }
-      }
-    </style>
-    <script>
-      window.addEventListener("load", function () {
-        $("header .iniciar-sesion").on("click", function () {
-          var c = $(".modal-login .cnt-login");
-
-          $(".modal-login .cnt-login-background").width(c.width() + 115);
-          $(".modal-login .cnt-login-background").height(c.height() + 100);
-        });
-      }, false);
-    </script>
-    <div id="modal-login" style="display:none;">
-      <div class="col-6 desktop-element" style="position: relative;">
-        <div class="cnt-login-background"></div>
-      </div>
-      <div class="col-6 cnt-login">
-        <h2>Te damos la bienvenida a kubo.financiero</h2>
-        <div class="kubo-form">
-          <div class="espacio-vertical">
-            <label for="email">Correo electrónico o código de cliente:</label>
-            <input type="text" name="email" placeholder="Correo electrónico" data-warning="false" id="email" />
-            <div id="warning-primer_nombre" class="input-warning" style="display:none;">Este campo es obligatorio</div>
-          </div>
-          <div class="espacio-vertical" style="margin-bottom: 20px;">
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" placeholder="Contraseña" data-warning="false" id="password" />
-            <div id="warning-password" class="input-warning" style="display:none;">Este campo es obligatorio</div>
-          </div>
-          <div>
-            <div class="text-link">
-              <a href="">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
             </div>
-            <a class="callAction btnPrimario iniciar-sesion" href="javascript:void(0)" onclick="">Inicia sesión</a>
-            <div class="text-link" style="margin-top: 10px;">
-              <span>Si aún no tienes cuenta, comienza aquí</span>
-              <div><a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero
-                  un préstamo</a>&nbsp;o&nbsp;<a
-                  href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
+        </div>
+    </main>
+    <footer>
+        <div id="footer-js"></div>
+        <section class="modales-footer">
+            <article>
+                <style>
+                    .modal-legal-cat hr {
+                        margin: 24px 0 30px 0;
+                        border: solid 1px #d9d9d9;
+                    }
+                    
+                    @media (min-width: 769px) {
+                        .modal-legal-cat {
+                            width: 650px
+                        }
+                    }
+                </style>
+                <div id="modal-legal-cat" style="display:none;">
+                    <h3>Costo Anual Total (CAT) Promedio 56.4% sin IVA.</h3>
+                    <hr>
+                    <p>Para fines informativos y de comparación exclusivamente.</p>
+                    <p>El cálculo incluye todos los productos de crédito.</p>
+                    <p>Fecha de cálculo al 1 de Enero del 2019 con una tasa de interés ponderada del 40.28% (Sin IVA) Tasa Fija Anual Simple, con monto promedio de los créditos de $42,553.84</p>
+                    <p>Créditos sujetos a aprobación.</p>
+                </div>
+            </article>
+            <article>
+                <style>
+                    .modal-condusef hr {
+                        margin: 24px 0 30px 0;
+                        border: solid 1px #d9d9d9;
+                    }
+                    
+                    .modal-condusef a {
+                        color: var(--green-color);
+                        text-decoration: none;
+                    }
+                    
+                    .modal-condusef a:hover {
+                        color: var(--green-color);
+                        text-decoration: underline;
+                    }
+                    
+                    .modal-condusef ul {
+                        list-style: none;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                    }
+                    
+                    @media (min-width: 769px) {
+                        .modal-condusef {
+                            width: 650px
+                        }
+                    }
+                </style>
+                <div id="modal-condusef" style="display:none;">
+                    <h3>CONDUSEF</h3>
+                    <hr>
+                    <p>Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros</p>
+                    <h4><strong>Centro de Atención Telefónica</strong></h4>
+                    <ul>
+                        <li><a href="tel:53400999">53-40-09-99</a></li>
+                        <li><a href="tel:018009998080">01-800-999-80-80</a></li>
+                        <li><a href="https://www.gob.mx/condusef" target="noopener">www.condusef.gob.mx</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <style>
+                    .modal-une hr {
+                        margin: 24px 0 30px 0;
+                        border: solid 1px #d9d9d9;
+                    }
+                    
+                    .modal-une .contacto {
+                        margin-top: 30px
+                    }
+                    
+                    .modal-une a {
+                        color: var(--green-color);
+                        text-decoration: none
+                    }
+                    
+                    .modal-une a:hover {
+                        color: var(--green-color);
+                        text-decoration: underline
+                    }
+                    
+                    @media (min-width: 769px) {
+                        .modal-une {
+                            width: 650px
+                        }
+                    }
+                    
+                    @media (max-width:768px) {
+                        .modal-une p {
+                            font-size: 15px;
+                            margin: 8px 0;
+                            line-height: 1.4;
+                        }
+                        .modal-une .modal-une .contacto {
+                            margin-top: 20px
+                        }
+                    }
+                </style>
+                <div id="modal-une" style="display:none;">
+                    <h3>Unidad Especializada de Atención a Usuarios (UNE) Ku-bo Financiero, S.A. de C.V., S.F.P.</h3>
+                    <hr>
+                    <p><strong>Queremos ofrecerle un servicio eficiente.</strong></p>
+                    <p>Favor de dirigir sus quejas, sugerencias, dudas o solicitudes de aclaración a:</p>
+                    <div class="contacto">
+                        <p><strong>Dayana Karen Peña Cortés</strong></p>
+                        <p>Titular de UNE y Encargado Regional</p>
+                        <p>Dirección: Barranca del Muerto No. 40 Col. Florida, Del. Álvaro Obregón C.P. 01030, Ciudad de México (55) 88-80- 34-66</p>
+                        <p>Correo electrónico: <a href="mailto:une@kubofinanciero.com">une@kubofinanciero.com</a></p>
+                        <p>Horario de atención: Lunes a Viernes 09:00 a 18:00 horas</p>
+                    </div>
+                    <div class="contacto">
+                        <p><strong>Dayana Karen Peña Cortés</strong></p>
+                        <p>Titular de UNE y Encargado Regional</p>
+                        <p>Dirección: Barranca del Muerto No. 40 Col. Florida, Del. Álvaro Obregón C.P. 01030, Ciudad de México (55) 88-80- 34-66</p>
+                        <p>Correo electrónico: <a href="mailto:une@kubofinanciero.com">une@kubofinanciero.com</a></p>
+                        <p>Horario de atención: Lunes a Viernes 09:00 a 18:00 horas</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </footer>
+    <div id="modal-dialog">
+        <div class="container">
+            <div class="close-modal"></div>
+            <div class="dinamic-content"></div>
+        </div>
+    </div>
+    <article>
+        <style>
+            .modal-login h2 {
+                text-align: left;
+            }
+            
+            .modal-login .kubo-form {
+                padding-top: 14px;
+            }
+            
+            .modal-login a:not(.callAction) {
+                font-size: 18px;
+                color: var(--green-color);
+                text-decoration: underline;
+            }
+            
+            .modal-login a:not(.callAction):hover {
+                text-decoration: none;
+            }
+            
+            .modal-login .iniciar-sesion {
+                margin: 20px 0;
+            }
+            
+            .modal-login .text-link {
+                font-weight: lighter;
+                font-size: 18px;
+                text-align: center;
+                line-height: 1.8;
+                color: var(--text-color)
+            }
+            
+            .modal-login .only-text {
+                padding: 8px 0 12px 0;
+                font-size: 20px;
+                color: #b4b4b4;
+            }
+            
+            .modal-login .cnt-login-background {
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                background: url('https://informes.kubofinanciero.com/hubfs/resources/img/personas-con-celular.jpg') -135px center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-bottom-left-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-bottomleft: 5px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            
+            @media (min-width: 769px) {
+                .modal-login h2 {
+                    margin-bottom: 20px;
+                }
+                .modal-login {
+                    width: 780px
+                }
+                .modal-login .cnt-login {
+                    padding-left: 60px;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .modal-login h2 {
+                    font-size: 22px;
+                }
+                .modal-login .kubo-form {
+                    padding: 14px 0 20px 0;
+                }
+                .modal-login label {
+                    line-height: 30px;
+                }
+            }
+        </style>
+        <script>
+            window.addEventListener("load", function() {
+                $("header .iniciar-sesion").on("click", function() {
+                    var c = $(".modal-login .cnt-login");
+
+                    $(".modal-login .cnt-login-background").width(c.width() + 115);
+                    $(".modal-login .cnt-login-background").height(c.height() + 100);
+                });
+            }, false);
+        </script>
+        <div id="modal-login" style="display:none;">
+            <div class="col-6 desktop-element" style="position: relative;">
+                <div class="cnt-login-background"></div>
+            </div>
+            <div class="col-6 cnt-login">
+                <h2>Te damos la bienvenida a kubo.financiero</h2>
+                <div class="kubo-form">
+                    <div class="espacio-vertical">
+                        <label for="email">Correo electrónico o código de cliente:</label>
+                        <input type="text" name="email" placeholder="Correo electrónico" data-warning="false" id="email" />
+                        <div id="warning-primer_nombre" class="input-warning" style="display:none;">Este campo es obligatorio</div>
+                    </div>
+                    <div class="espacio-vertical" style="margin-bottom: 20px;">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" name="password" placeholder="Contraseña" data-warning="false" id="password" />
+                        <div id="warning-password" class="input-warning" style="display:none;">Este campo es obligatorio</div>
+                    </div>
+                    <div>
+                        <div class="text-link">
+                            <a href="">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <a class="callAction btnPrimario iniciar-sesion" href="javascript:void(0)" onclick="">Inicia sesión</a>
+                        <div class="text-link" style="margin-top: 10px;">
+                            <span>Si aún no tienes cuenta, comienza aquí</span>
+                            <div><a href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero
+                  un préstamo</a>&nbsp;o&nbsp;<a href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
                   invertir</a></div>
-              <div class="only-text">o</div>
+                            <div class="only-text">o</div>
+                        </div>
+                        <a class="callAction btnAzul facebook" href="javascript:void(0)" onclick="">Inicia con Facebook</a>
+                    </div>
+                </div>
             </div>
-            <a class="callAction btnAzul facebook" href="javascript:void(0)" onclick="">Inicia con Facebook</a>
-          </div>
         </div>
-      </div>
-    </div>
-  </article>
+    </article>
 </body>
 
 </html>

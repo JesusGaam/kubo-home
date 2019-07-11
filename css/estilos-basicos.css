@@ -36,7 +36,7 @@ nav {
 main p,
 main a,
 main li,
-main span{
+main span {
     margin: 0 auto;
     font-size: 18px;
     color: var(--text-color);
@@ -50,10 +50,12 @@ main li {
     max-width: 650px;
     padding: 10px 0 30px 0;
 }
+
 main>div:not(#header) h2,
 main>div:not(#header) h3 {
     margin: 45px auto 20px auto;
 }
+
 h2,
 h3 {
     text-align: left;
@@ -164,9 +166,10 @@ footer section {
     padding: 10px;
 }
 
-footer section h4 {
+footer section .h4 {
     margin: 34px 0 10px 0;
     font-size: 22px;
+    font-weight: bold;
     color: var(--green-color-secundary);
 }
 
@@ -526,11 +529,9 @@ footer .col-2 li .instagram-icon {
     body .desktop-element {
         display: none !important;
     }
-
     div.container>div.container-center {
         margin: 0;
     }
-
     .col-1,
     .col-2,
     .col-3,
@@ -555,9 +556,9 @@ footer .col-2 li .instagram-icon {
     header {
         height: 38px;
     }
-    header .header-black .container-center{
+    header .header-black .container-center {
         padding: 0;
-    } 
+    }
     header .header-black img {
         height: 16px;
         margin: 11px 0 0 12px;
@@ -571,7 +572,7 @@ footer .col-2 li .instagram-icon {
     #header-menu {
         position: fixed;
         top: 38px;
-        width:100%;
+        width: 100%;
         height: 0%;
         background-color: #333;
         overflow: hidden;

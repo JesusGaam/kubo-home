@@ -564,10 +564,12 @@ footer .col-2 li .instagram-icon {
         margin: 11px 0 0 12px;
     }
     header .header-black .right-elements {
-        margin: 4px 12px 0 0;
+        margin: 5px 12px 0 0;
     }
     header .header-black .right-elements li {
-        font-size: 30px;
+        font-size: 20px;
+        font-weight: normal;
+        cursor: pointer;
     }
     #header-menu {
         position: fixed;
@@ -702,7 +704,7 @@ footer .col-2 li .instagram-icon {
 
 /*** MEDIUM MOBILE DEVICES ***/
 
-@media @(min-width: 577px) and (max-width: 768px) {}
+@media (min-width: 577px) and (max-width: 768px) {}
 
 
 /*** SMALL MOBILE DEVICES ***/

@@ -18,8 +18,8 @@
          :root {
             --top-content-header: initial;
             --top-content-header-mobile: initial;
-            --background-image-header: url('https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-img/img-banner.jpg');
-            --background-image-header-mobile: url('https://cdn2.hubspot.net/hubfs/2511529/resources/img/header/LP-prestamos-girl.jpg');
+            --background-image-header: url('https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-inv/img/banner.jpg');
+            --background-image-header-mobile: url('https://www.kubofinanciero.com/Kubo/Portal/resources/images/home-inv/img/banner.jpg');
             --background-position-header: center center;
             --background-position-header-mobile: center center;
         }
@@ -35,69 +35,58 @@
                     <li class="desktop-element"><a class="iniciar-sesion link-modal-dialog" data-content-modal-dialog="modal-login">Iniciar sesión</a></li>
                     <li class="phone"><a><i class="fa fa-phone-square"></i> <span class="desktop-element">(55)
                 <strong>62690024</strong></span></a></li>
-                    <li class="mobile-element"><i class="fa fa-bars" style="color:#8FC450;" id="hamburger-menu"></i></li>
+                    <li class="mobile-element" id="hamburger-menu">MENÚ</li>
                 </ul>
             </div>
         </div>
     </header>
-    <div class="container" id="header-menu"></div>
+    <div class="container" id="header-menu">
+        <div class="container-center">
+            <nav>
+                <ul>
+                    <li class="mobile-element"><a href="#iniciarSesion" class=" link-modal-dialog" data-content-modal-dialog="modal-login">Iniciar sesión</a></li>
+                    <li><a href="prestamos-en-linea.html">Préstamos</a></li>
+                    <li><a href="inversion.html">Inversión</a></li>
+                    <li><a href="quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="https://blog.kubofinanciero.com">Blog</a></li>
+                    <li class="especial"><a href="https://informes.kubofinanciero.com/refiere-y-gana">¡Gana $300!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <main>
         <div class="container" id="header">
             <div class="container-center">
-                <h1>Préstamos Personales en Línea e Inversiones</h1>
+                <h1>Obtén más por tu dinero</h1>
+                <h2>Conoce nuestros productos <b>kubo.impulso</b> o <b>kubo.plazofijo</b></h2>
                 <div id="header-options">
                     <style>
-                        #header-options .col-4 {
+                        #header-options .ctas {
                             text-align: center;
                         }
                         
-                        #header-options .col-4 .simular {
-                            display: block;
-                            font-size: 20px;
-                        }
-                        
-                        #header-options .col-4 .simular.naranja {
-                            color: var(--orange-color);
-                        }
-                        
                         @media (min-width: 769px) {
-                            #header-options .col-4 {
-                                padding-top: 50px;
-                            }
-                            #header-options .col-4 .callAction {
-                                width: 200px;
-                            }
-                            #header-options .col-4 .simular {
-                                margin-top: 20px;
+                            #header-options .ctas {
+                                padding-top: 40px;
                             }
                         }
                         
                         @media (max-width: 768px) {
-                            #header-options div:nth-child(3) {
-                                padding-top: 60px;
-                            }
-                            #header-options .col-4:nth-child(4) {
-                                padding-top: 30px;
-                            }
-                            #header-options .col-4 .simular {
-                                margin-top: 10px;
+                            #header-options .ctas {
+                                padding-top: 20px;
                             }
                         }
                     </style>
-                    <div class="col-2"></div>
-                    <div class="col-4">
-                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Quiero un
-              prestamo</a>
-                        <a class="simular" href="https://www.kubofinanciero.com/Kubo/Portal/acreditado/preregistro/comenzar-registro.xhtml">Simular
-              mi préstamo</a>
+                    <div>
+                        <div class="ctas col-2"></div>
+                        <div class="ctas col-4">
+                            <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml">Empezar a invertir</a>
+                        </div>
+                        <div class="ctas col-4">
+                            <a class="callAction btnSecundarioGris" href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/simulador-inversion.xhtml">Simula tu inversión</a>
+                        </div>
+                        <div class="ctas col-2"></div>
                     </div>
-                    <div class="col-4">
-                        <a class="callAction btnPrimario" href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/preregistro/comenzar-registro.xhtml?paso=Inicio">Quiero
-              invertir</a>
-                        <a class="simular " href="https://www.kubofinanciero.com/Kubo/Portal/inversionista/simulador-inversion.xhtml">Simular mi
-              inversión</a>
-                    </div>
-                    <div class="col-2"></div>
                 </div>
             </div>
         </div>
